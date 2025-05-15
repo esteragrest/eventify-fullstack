@@ -20,7 +20,7 @@ export const Manual = () => {
 			<div className={styles['video-container']}>
 				<video
 					ref={videoRef}
-					src="/video/skz.mp4"
+					src="/video/create-event.mp4"
 					controls
 					className={styles.video}
 				>
