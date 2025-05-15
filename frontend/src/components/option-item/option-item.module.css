@@ -1,0 +1,11 @@
+.option-item-container {
+	display: flex;
+	width: 100%;
+	justify-content: start;
+	align-items: start;
+	flex-direction: column;
+}
+
+.option-name {
+	opacity: 0.7;
+}
