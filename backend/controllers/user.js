@@ -165,9 +165,7 @@ class UserController {
 			}
 
 			if (req.file) {
-				updateData.photo = `${req.protocol}://${req.get('host')}/uploads/${
-					req.file.filename
-				}`;
+				updateData.photo = `${process.env.SERVER_URL}/uploads/${req.file.filename}`;
 			}
 
 			if (updateData.password) {
