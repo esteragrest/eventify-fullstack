@@ -10,7 +10,7 @@ export const addRatingAsync = (ratingData) => (dispatch) => {
 			if (error) {
 				dispatch(
 					openModal({
-						image: '/public/img/error.png',
+						image: '/img/error.png',
 						title: 'Произошла ошибка :(',
 						text: 'Вы можете попробовать оставить оценку позже.',
 					}),
@@ -19,7 +19,7 @@ export const addRatingAsync = (ratingData) => (dispatch) => {
 
 			dispatch(
 				openModal({
-					image: '/public/img/success.png',
+					image: '/img/success.png',
 					title: 'Спасибо за вашу оценку!',
 					text: 'Вы можете вернуть к информации о мероприятии или найти что-то ещё.',
 				}),

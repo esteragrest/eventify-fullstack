@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { selectUserId } from '../../../selectors';
 import { useLogout } from '../../../hooks';
 import PropTypes from 'prop-types';
-import styles from './user-profile-header.module.css';
+import styles from './user-header.module.css';
 
-export const UserProfileHeader = ({
+export const UserHeader = ({
 	id,
 	firstName,
 	lastName,
@@ -41,7 +41,7 @@ export const UserProfileHeader = ({
 
 	const onDeleteEvent = () => {
 		const modalData = {
-			image: '/public/img/delete.png',
+			image: '/img/delete.png',
 			title: 'Вы уверены, что хотите удалить аккаунт?',
 			text: 'После удаления все Ваши данные будут стерты.',
 			children: <DeleteButtons onDelete={handleDeleteAccount} />,
@@ -54,7 +54,7 @@ export const UserProfileHeader = ({
 			<div className={styles['user-info-container']}>
 				<img
 					className={styles.avatar}
-					src={photo ? photo : '/public/img/no-photo-1.jpg'}
+					src={photo ? photo : '/img/no-photo-1.jpg'}
 					alt={firstName}
 				/>
 				<div className={styles['user-info']}>
@@ -97,7 +97,7 @@ export const UserProfileHeader = ({
 	);
 };
 
-UserProfileHeader.propTypes = {
+UserHeader.propTypes = {
 	id: PropTypes.number.isRequired,
 	firstName: PropTypes.string.isRequired,
 	lastName: PropTypes.string,

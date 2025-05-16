@@ -1,6 +1,6 @@
 module.exports = {
 	logging: false,
 	dialect: 'postgres',
-	host: 'localhost',
+	host: process.env.POSTGRES_HOST,
 	define: { timestamps: false },
 };

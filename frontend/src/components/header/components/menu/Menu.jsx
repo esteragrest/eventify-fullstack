@@ -1,4 +1,4 @@
-import { NavBar } from '../../../navbar/NavBar';
+import { NavigationBar } from '../../../navigation-bar/NavigationBar';
 import { AuthButtons } from '../../../auth-buttons/AuthButtons';
 import { Button } from '../../../button/Button';
 import { Link } from 'react-router-dom';
@@ -10,27 +10,32 @@ import styles from './menu.module.css';
 import { useLogout } from '../../../../hooks';
 
 export const Menu = ({ toggleMenu }) => {
-	const userRoleId = useSelector(selectUserRole)
-	const onLogout = useLogout()
+	const userRoleId = useSelector(selectUserRole);
+	const onLogout = useLogout();
 
-	const isAuth = isAuthorized(userRoleId)
+	const isAuth = isAuthorized(userRoleId);
 
 	return (
 		<div className={styles['menu-container']}>
-			<img src="/public/img/cross.png" alt="cross" onClick={toggleMenu} />
+			<img src="/img/cross.png" alt="cross" onClick={toggleMenu} />
 			<div className={styles.navbar}>
-				<NavBar />
+				<NavigationBar />
 			</div>
 			<div className={styles.buttons}>
-			{!isAuth ? <AuthButtons /> :
-				<div className={styles.buttons}>
-					<Button backgroundColor="#E8FF59">
-						<Link to={'/event/create'}>Создать мероприятие</Link>
-					</Button>
-					<Button border="2px solid #C0A2E2">
-						<Link to={'/login'} onClick={onLogout}>Выход</Link>
-					</Button>
-				</div>}
+				{!isAuth ? (
+					<AuthButtons />
+				) : (
+					<div className={styles.buttons}>
+						<Button backgroundColor="#E8FF59">
+							<Link to={'/event/create'}>Создать мероприятие</Link>
+						</Button>
+						<Button border="2px solid #C0A2E2">
+							<Link to={'/login'} onClick={onLogout}>
+								Выход
+							</Link>
+						</Button>
+					</div>
+				)}
 			</div>
 		</div>
 	);

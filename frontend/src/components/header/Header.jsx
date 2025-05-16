@@ -1,5 +1,5 @@
 import { Logo } from '../logo/Logo';
-import { NavBar } from '../navbar/NavBar';
+import { NavigationBar } from '../navigation-bar/NavigationBar';
 import { AuthButtons, Menu, Search } from './components';
 import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
@@ -26,7 +26,7 @@ export const Header = () => {
 		<header className={styles.header}>
 			<Logo />
 			<div className={styles.navbar}>
-				<NavBar />
+				<NavigationBar />
 			</div>
 			<Search />
 			<div className={styles.buttons}>
@@ -40,12 +40,12 @@ export const Header = () => {
 						{isAdmin && (
 							<Button>
 								<Link to="/users">
-									<img src="/public/img/users.svg" alt="all-users" />
+									<img src="/img/users.svg" alt="all-users" />
 								</Link>
 							</Button>
 						)}
 						<Button onClick={onLogout}>
-							<img src="/public/img/logout.png" alt="logout" />
+							<img src="/img/logout.png" alt="logout" />
 						</Button>
 					</div>
 				)}

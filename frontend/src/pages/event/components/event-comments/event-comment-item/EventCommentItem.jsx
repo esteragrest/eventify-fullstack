@@ -40,7 +40,7 @@ export const EventCommentItem = ({
 
 	const onDeleteComment = (commentId) => {
 		const modalData = {
-			image: '/public/img/delete.png',
+			image: '/img/delete.png',
 			title: 'Вы уверены, что хотите удалить этот вопрос?',
 			text: 'После удаления вопрос не будет отображаться в общем списке и Вы не сможете на него ответить.',
 			children: <DeleteButtons onDelete={() => handleDeleteComment(commentId)} />,

@@ -1,7 +1,7 @@
 import { ExtendedLink } from './extended-link/ExtendedLink';
-import styles from './navbar.module.css'
+import styles from './navigation-bar.module.css';
 
-export const NavBar = () => {
+export const NavigationBar = () => {
 	return (
 		<nav className={styles['control-panel']}>
 			<ul>

@@ -1,6 +1,6 @@
 const express = require("express")
 const RoleController = require("../controllers/role")
-const router = express.Router()
+const router = express.Router({ mergeParams: true });
 const isAuthenticated = require("../middlewares/isAuthenticated")
 const isAdmin = require("../middlewares/isAdmin")
 

@@ -1,6 +1,6 @@
 const express = require("express");
 const EventController = require("../controllers/event");
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const upload = require("../middlewares/multer");
 

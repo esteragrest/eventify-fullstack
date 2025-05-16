@@ -20,7 +20,7 @@
 	height: 20px;
 	background-color: #fff;
 	border-radius: 4px;
-	border: 2px solid #C0A2E2;
+	border: 2px solid #c0a2e2;
 	vertical-align: sub;
 	margin-right: 5px;
 }
@@ -30,7 +30,7 @@
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	background-image: url(/public/img/check-mark.svg);
+	background-image: url(/img/check-mark.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -45,5 +45,7 @@
 }
 
 .real-checkbox:focus + .custom-checkbox {
-	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 0px 10px  rgba(0, 0, 0, 0.3)
+	box-shadow:
+		0px 0px 0px 1px rgba(0, 0, 0, 0.4),
+		0px 0px 10px rgba(0, 0, 0, 0.3);
 }

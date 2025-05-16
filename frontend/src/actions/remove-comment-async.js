@@ -15,7 +15,7 @@ export const removeCommentAsync = (commentId) => (dispatch) => {
 			if (error) {
 				dispatch(
 					openModal({
-						image: '/public/img/error.png',
+						image: '/img/error.png',
 						title: 'Произошла ошибка при удалении комментария :(',
 						text: 'Попробуйте повторить позже.',
 						children: error,

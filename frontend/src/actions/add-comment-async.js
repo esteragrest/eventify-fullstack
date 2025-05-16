@@ -18,7 +18,7 @@ export const addCommentAsync = (userId, eventId, parentId, content) => (dispatch
 			if (newComment.error) {
 				dispatch(
 					openModal({
-						image: '/public/img/error.png',
+						image: '/img/error.png',
 						title: 'Произошла ошибка при добавлении Вашего вопроса :(',
 						text: 'Вы можете попробовать оставить вопрос позже.',
 					}),

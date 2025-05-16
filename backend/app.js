@@ -16,14 +16,13 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
+// app.use(express.static(path.resolve(__dirname, 'frontend/dist')));
+app.use(express.static('../frontend/dist'));
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
-
-app.listen(PORT, () => {
-	console.log(`Server is running on http://localhost:${PORT}`);
-});
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', usersRoutes);
@@ -33,3 +32,14 @@ app.use('/api/comments', commentsRoutes);
 app.use('/api/ratings', ratingsRoutes);
 app.use('/api/roles', rolesRoutes);
 app.use('/uploads', express.static(path.join(__dirname, './uploads')));
+
+app.use((req, res, next) => {
+	if (req.originalUrl.startsWith('/api/')) {
+		return next();
+	}
+	res.sendFile(path.resolve(__dirname, '..', 'frontend', 'dist', 'index.html'));
+});
+
+app.listen(PORT, () => {
+	console.log(`Server is running on http://localhost:${PORT}`);
+});

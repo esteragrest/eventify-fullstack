@@ -5,7 +5,7 @@ import styles from './banner.module.css';
 export const Banner = () => {
 	return (
 		<div className={styles['banner-container']}>
-			<img src="/public/img/main-page-3.png" alt="Присоединяйтесь к Eventify" />
+			<img src="/img/main-page-3.png" alt="Присоединяйтесь к Eventify" />
 			<div className={styles['banner-text']}>
 				<h2>Станьте частью мира ярких событий!</h2>
 				<p>

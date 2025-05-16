@@ -26,7 +26,7 @@ export const SelectableMenu = ({ title, options, setValue, selectedValue }) => {
 			<div className={styles['select-button']} onClick={handleOpenMenu}>
 				<span>{selectedOption}</span>
 				<i className={`${styles['select-icon']} ${isOpen ? styles.active : ''}`}>
-					<img src="/public/img/select.svg" alt="select-icon" />
+					<img src="/img/select.svg" alt="select-icon" />
 				</i>
 			</div>
 			{isOpen && (

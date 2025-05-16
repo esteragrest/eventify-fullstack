@@ -7,9 +7,9 @@ import { isAuthorized } from '../../../../utils';
 import styles from './welcome.module.css';
 
 export const Welcome = () => {
-	const userRoleId = useSelector(selectUserRole)
+	const userRoleId = useSelector(selectUserRole);
 
-	const isAuth = isAuthorized(userRoleId)
+	const isAuth = isAuthorized(userRoleId);
 
 	return (
 		<div className={styles['welcome-container']}>
@@ -21,17 +21,19 @@ export const Welcome = () => {
 					управляйте списком гостей и создавайте незабываемые моменты.
 				</p>
 				<div className={styles.buttons}>
-				{!isAuth ? <AuthButtons /> :
-					<div>
-						<Button backgroundColor="#E8FF59">
-							<Link to={'/event/create'}>Создать мероприятие</Link>
-						</Button>
-					</div>
-				}
+					{!isAuth ? (
+						<AuthButtons />
+					) : (
+						<div>
+							<Button backgroundColor="#E8FF59">
+								<Link to={'/event/create'}>Создать мероприятие</Link>
+							</Button>
+						</div>
+					)}
 				</div>
 			</div>
 			<div className={styles.banner}>
-				<img src="/public/img/main-page.png" alt="banner" />
+				<img src="/img/main-page.png" alt="banner" />
 			</div>
 		</div>
 	);

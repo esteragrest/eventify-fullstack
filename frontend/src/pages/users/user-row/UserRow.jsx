@@ -41,7 +41,7 @@ export const UserRow = ({
 
 	const handleUserRemove = () => {
 		const modalData = {
-			image: '/public/img/delete.png',
+			image: '/img/delete.png',
 			title: 'Вы уверены, что хотите удалить этого пользователя?',
 			text: 'После удаления пользователь больше не сможет зайти на свой аккаунт.',
 			children: <DeleteButtons onDelete={onUserRemove} />,
@@ -71,7 +71,7 @@ export const UserRow = ({
 					onClick={() => onRoleSave(id, selectedRoleId)}
 					disabled={saveButtonDisabeld}
 				>
-					<img className={styles.save} src="/public/img/save.svg" alt="save" />
+					<img className={styles.save} src="/img/save.svg" alt="save" />
 				</Button>
 			</div>
 			<Button onClick={handleUserRemove}>Удалить</Button>

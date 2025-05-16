@@ -24,7 +24,7 @@ export const updateUserAsync = (updatedUserData, id) => (dispatch) => {
 		.catch((error) => {
 			dispatch(
 				openModal({
-					image: '/public/img/error.png',
+					image: '/img/error.png',
 					title: 'Произошла ошибка при сохранении данных :(',
 					text: 'Попробуйте повторить позже.',
 					children: error,

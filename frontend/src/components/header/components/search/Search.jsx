@@ -32,7 +32,7 @@ export const Search = () => {
 			/>
 			<img
 				className={styles['search-button']}
-				src="/public/img/search.svg"
+				src="/img/search.svg"
 				alt="search-img"
 				onClick={handleSearch}
 			/>

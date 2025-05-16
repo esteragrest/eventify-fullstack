@@ -42,7 +42,7 @@ export const EventHeader = ({
 
 	const onDeleteEvent = () => {
 		const modalData = {
-			image: '/public/img/delete.png',
+			image: '/img/delete.png',
 			title: 'Вы уверены, что хотите удалить это мероприятие?',
 			text: 'После удаления мероприятие не будет отображаться в общем списке и никто не сможет его увидеть.',
 			children: <DeleteButtons onDelete={handleDeleteEvent} />,

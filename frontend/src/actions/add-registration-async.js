@@ -10,7 +10,7 @@ export const addRegistrationAsync = (registrationData, reset) => (dispatch) => {
 			if (res.error) {
 				dispatch(
 					openModal({
-						image: '/public/img/error.png',
+						image: '/img/error.png',
 						title: 'Произошла ошибка регистрации :(',
 						text: 'Вы можете попробовать зарегистрироваться позже, если вы еще не были зарегистрированы.',
 					}),
@@ -20,7 +20,7 @@ export const addRegistrationAsync = (registrationData, reset) => (dispatch) => {
 
 			dispatch(
 				openModal({
-					image: '/public/img/success.png',
+					image: '/img/success.png',
 					title: 'Вы успешно зарегистрировались на мероприятие!',
 					text: 'Вы можете вернуть к информации о мероприятии или найти что-то ещё.',
 				}),

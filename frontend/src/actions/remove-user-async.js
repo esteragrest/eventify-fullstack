@@ -10,7 +10,7 @@ export const removeUserAsync = (userId) => (dispatch) => {
 			if (error) {
 				dispatch(
 					openModal({
-						image: '/public/img/error.png',
+						image: '/img/error.png',
 						title: 'Произошла ошибка при удалении аккаунта :(',
 						text: 'Попробуйте повторить позже.',
 						children: error,

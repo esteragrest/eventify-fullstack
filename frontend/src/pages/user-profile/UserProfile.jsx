@@ -9,7 +9,7 @@ import { useMatch, useNavigate, useParams } from 'react-router-dom';
 import { checkAccessRights, isAuthorized, request } from '../../utils';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading, selectUserId, selectUserRole } from '../../selectors';
-import { UserProfileHeader } from './user-profile-header/userProfileHeader';
+import { UserHeader } from './user-header/UserHeader';
 import { UserEvents } from './user-events/UserEvents';
 import styles from './user-profile.module.css';
 import { setIsLoading } from '../../actions';
@@ -94,7 +94,7 @@ export const UserProfile = () => {
 				) : (
 					<>
 						{userProfile && userProfile.id && userProfile.firstName && (
-							<UserProfileHeader
+							<UserHeader
 								{...userProfile}
 								theseActiveEvents={theseActiveEvents}
 								handleActiveEvents={() =>

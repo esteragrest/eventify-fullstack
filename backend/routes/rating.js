@@ -1,6 +1,6 @@
 const express = require("express")
 const RatingController = require("../controllers/rating")
-const router = express.Router()
+const router = express.Router({ mergeParams: true });
 const isAuthenticated = require("../middlewares/isAuthenticated")
 
 router.get('/event/:eventId/list', RatingController.getRatingsByEventId)

@@ -18,7 +18,7 @@ export const saveEventAsync = (eventData, url, method) => (dispatch) => {
 			if (res.error) {
 				dispatch(
 					openModal({
-						image: '/public/img/error.png',
+						image: '/img/error.png',
 						title: 'Произошла ошибка при сохранении мероприятия :(',
 						text: 'Попробуйте повторить позже.',
 						children: res.error,
@@ -31,7 +31,7 @@ export const saveEventAsync = (eventData, url, method) => (dispatch) => {
 
 				dispatch(
 					openModal({
-						image: '/public/img/closed-event.png',
+						image: '/img/closed-event.png',
 						title: 'Вы создали закрытое мероприятие!',
 						text: 'Ваша ссылка для приглашения на мероприятие:',
 						children: eventAccesslink,

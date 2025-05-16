@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const ItemMainInfo = ({ itemName, photo, to, children }) => {
 	return (
 		<Link to={to} className={styles['user-info']}>
-			<img src={photo ? photo : '/public/img/no-photo-1.jpg'} alt={itemName} />
+			<img src={photo ? photo : '/img/no-photo-1.jpg'} alt={itemName} />
 			<div className={styles['user-details']}>
 				<p className={styles['user-name']}>{itemName}</p>
 				{children}

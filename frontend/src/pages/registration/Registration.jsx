@@ -82,7 +82,7 @@ export const Registration = () => {
 				<Loader />
 			) : (
 				<>
-					<BackgroundBanner imgUrl="/public/img/register-1.png" />
+					<BackgroundBanner imgUrl="/img/register-1.png" />
 					<AuthFormContainer>
 						<TitleForm>Добро пожаловать в Eventify!</TitleForm>
 						<AuthLink
@@ -149,10 +149,10 @@ export const Registration = () => {
 							</Button>
 						</Form>
 					</AuthFormContainer>
-					<BackgroundBanner imgUrl="/public/img/register-2.png" />
+					<BackgroundBanner imgUrl="/img/register-2.png" />
 					<img
 						className={styles['mini-banner']}
-						src="/public/img/register.png"
+						src="/img/register.png"
 						alt="register"
 					/>
 				</>

@@ -4,14 +4,14 @@ export const CAPABILITIES = [
 		title: 'Создание мероприятий',
 		description:
 			'Простая форма для указания названия, даты, места и деталей события. Возможность добавлять изображения, видео.',
-		icon: '/public/img/create.svg',
+		icon: '/img/create.svg',
 		color: '#E8FF59',
 	},
 	{
 		id: '002',
 		title: 'Фильтрация и поиск',
 		description: 'Удобные фильтры по категориям, месту, дате или все сразу.',
-		icon: '/public/img/filter.svg',
+		icon: '/img/filter.svg',
 		color: '#C0A2E2',
 	},
 	{
@@ -19,7 +19,7 @@ export const CAPABILITIES = [
 		title: 'Управление участниками',
 		description:
 			'Возможность создать не только открытые мероприятия, но и закрытые, которые будут доступны только по ссылке.',
-		icon: '/public/img/members.png',
+		icon: '/img/members.png',
 		color: '#E0C9FF',
 	},
 	{
@@ -27,7 +27,7 @@ export const CAPABILITIES = [
 		title: 'Уведомления и напоминания',
 		description:
 			'Системные напоминания о предстоящих событиях, чтобы никто не пропустил важный момент.',
-		icon: '/public/img/notifications.svg',
+		icon: '/img/notifications.svg',
 		color: '#E8FF59',
 	},
 ];

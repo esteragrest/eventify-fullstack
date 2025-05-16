@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export const ErrorPage = ({ status, title, message }) => {
 	return (
 		<div className={styles['error-container']}>
-			<BackgroundBanner imgUrl="/public/img/error-page-left.svg" />
+			<BackgroundBanner imgUrl="/img/error-page-left.svg" />
 			<div className={styles.error}>
 				<h1 className={styles['error-status']}>{status}</h1>
 				<h2>{title}</h2>
@@ -16,7 +16,7 @@ export const ErrorPage = ({ status, title, message }) => {
 					<Link to="/">На главную</Link>
 				</Button>
 			</div>
-			<BackgroundBanner imgUrl="/public/img/error-page-right.svg" />
+			<BackgroundBanner imgUrl="/img/error-page-right.svg" />
 		</div>
 	);
 };
